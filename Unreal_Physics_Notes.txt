@@ -1,0 +1,19 @@
+Physics Engine For Unreal
+
+[Collisions]
+    - Actors can be set to block, overlap, or ignore objects of given types.
+    - For two objects to collide and bounce off eachother, they both need to have their collision settings
+      set to block the other's object type.
+    - Collision events for blocking and overlapping can be listened to through call backs in blueprints or c++.
+    - Common actor types are WorldStatic, WorldDynamic, Pawn, PhysicsBody, Vehicle, and Destructible.
+    - That's about it for collisions.
+
+[Constraints]
+    - To make swinging chandaliers, or ball and chains, or any pendulum-like objects, use a constraint joint.
+    - Constraint joints refer to two objects. One object is the joint anchor and the other is the constrained body.
+    - The constrained body can swing back and forth between the given max rotation angles.
+    - The joint is called a physics constraint actor.
+    - Seems pretty simple to me.
+
+[Damping]
+    - 
