@@ -16,4 +16,48 @@ Physics Engine For Unreal
     - Seems pretty simple to me.
 
 [Damping]
-    - 
+    - Damping works to slow down linear or angular motion for physics bodies and constraints.
+    - Linear or angular damping can be added to physics bodies to simulate drag or friction.
+    - Limit stiffnes and limit damping can be added to constraints to determine the bounce back intensity
+      and deceleration rate of constrained objects as they reach their motion limits.
+
+[Destructibles]
+    - Used to allow actors to be broken apart when dealt damage.
+    - Can specify dammage thresholds at which the destructible will begin to break apart.
+    - I don't think this will be as relevant in my upcoming interview with HaptX.
+    - If they ask a question about objects breaking apart, I will know to use a destructible and read
+      the full docs then.
+
+[Physics]
+    - Unreal simulates physics with the PhysX 3.3 engine
+
+[Physics Materials]
+    - Editing or creating a new physics material allows you to set the friction, restitution (bounce), 
+      density, and surface type.
+    - To use physics materials, open the main material on an object and set the "Phys Material" to the desired
+      preset or custom physics material. This can be done on a material in the editor, or on the material 
+      of a specific instance in the inspector.
+    - Physics materials can be added to skeletal meshes, and the individual physics bodies within can have
+      their physics materials altered as well.
+    - Simple collisions with static meshes will use the physics material set from the static mesh editor.
+    - Complex collisions with static meshes will use the physics material inherited from the object's
+      material or attatched material instances.
+
+[Physics Bodies]
+    - You can tweak all kinds of settings like, enabling gravity, generating hit events, locking rotation
+      axes, linear and angular damping, and even setting up the object types to collide with.
+
+[Sub-Stepping]
+    - Sub stepping allows the physics engine to calculate changes in the scene faster than the game frame rate.
+    - This increases quality of physics simulations at the cost of computational power.
+
+[Walkable Slope]
+    - This sets the highest angle a character can walk up.
+    - Walkable slope is a pretty simple and self explanitory concept.
+    - Overriding this property can be done within the "character movement component".
+
+[Traces (Raycasts)]
+    - Raycasting allows you to shoot out an invisible line in front of a character and determine what objects
+      that line runs into.
+    - The intersected objects can be filtered by trace type or object type.
+    - The raycast can return single objects or multiple objects.
